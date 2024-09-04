@@ -1,4 +1,4 @@
-// src/ExcelSheet.js
+
 import React, { useState } from 'react';
 
 function ExcelSheet() {
@@ -35,12 +35,9 @@ function ExcelSheet() {
     // Function to handle submitting data to an API
     const handleSubmit = () => {
         console.log("Submitting data:", data);
-        // Example of API call using Axios (assuming you installed axios)
-        // axios.post('https://your-api-endpoint.com/data', { data })
-        //     .then(response => console.log("Data saved successfully:", response))
-        //     .catch(error => console.error("Error saving data:", error));
-    };
 
+    };
+    // returning the entire div and handling edit functionality dynamically with button(used to send api call to dabase);
     return (
         <div>
             <table>
