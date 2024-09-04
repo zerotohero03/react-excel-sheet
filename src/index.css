@@ -7,12 +7,14 @@ table {
   width: 100%;
   margin: 20px 0;
   border: 2px solid black;
+
 }
 
 td {
   border: 1px solid #ddd;
   padding: 8px;
   border: 1px solid black;
+
 }
 
 input {
@@ -30,9 +32,18 @@ button {
   color: white;
   border: none;
   cursor: pointer;
+  margin-left: 47%;
+
+
 }
 
 h1 {
   text-align: center;
   color: #4CAF50;
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-overflow: clip;
+  text-shadow: #4CAF50;
+  text-decoration-color: #4CAF50;
+
 }

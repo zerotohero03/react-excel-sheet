@@ -14,11 +14,7 @@ function ExcelSheet() {
         ["Competitor Analysis", "", "", ""],
         ["Anchor Text / URL Mapping", "", "", ""],
         ["Google Data Studio Report + Local Reporting Suite", "", "", ""],
-        ["Site Level Optimization", "", "", ""],
-        ["On Page Optimization", "", "", ""],
         ["Content Creation", "", "", ""],
-        ["Content Publishing", "", "", ""],
-        ["Premium Press Release", "", "", ""],
         ["Authority Niche Placements", "", "", ""],
         ["Review Management", "", "", ""],
         ["Index Links", "", "", ""],
@@ -32,14 +28,20 @@ function ExcelSheet() {
         setData(newData);
     };
 
-    // Function to handle submitting data to an API
+    //## Function to handle submitting data to an API
     const handleSubmit = () => {
         console.log("Submitting data:", data);
 
     };
+    //key event listener
+    const handleKeyPress = (event) => {
+        if (event.key === 'Enter') {
+            handleSubmit();
+        }
+    };
     // returning the entire div and handling edit functionality dynamically with button(used to send api call to dabase);
     return (
-        <div>
+        <div onKeyDown={handleKeyPress} tabIndex="0">
             <table>
                 <tbody>
                     {data.map((row, rowIndex) => (
@@ -50,6 +52,7 @@ function ExcelSheet() {
                                         type="text"
                                         value={cell}
                                         onChange={(e) => handleInputChange(rowIndex, colIndex, e.target.value)}
+
                                     />
                                 </td>
                             ))}
@@ -60,6 +63,7 @@ function ExcelSheet() {
             <button onClick={handleSubmit}>Submit Data</button>
         </div>
     );
+
 }
 
 export default ExcelSheet;
